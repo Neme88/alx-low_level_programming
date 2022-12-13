@@ -3,6 +3,7 @@
 * print_alphabet - print all aphabet.
 */
 void print_alphabet(void)
+
 {
 	char letter;
 
