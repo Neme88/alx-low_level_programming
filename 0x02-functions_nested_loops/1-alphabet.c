@@ -1,10 +1,8 @@
 #include "main.h"
 /**
-* main - print alphabet
-*
-* Return:0
+* print_alphabet - print all aphabet.
 */
-int main(void)
+void print_alphabet(void)
 {
 	char letter;
 
