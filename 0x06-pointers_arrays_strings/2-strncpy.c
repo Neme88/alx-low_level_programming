@@ -1,22 +1,34 @@
 #include "main.h"
 /**
- * print_number - Prints an integer
+ * _strncpy - copies a string to another string
  *
- * @n: the integer to print
+ * @dest: the buffer
+ * @src: the string to be copied
+ * @n: the number of bytes to include in @dest
  *
- * Return: nothing
+ * Return: pointer to the resulting string @dest
  */
 
-void print_number(int n)
+char *_strncpy(char *dest, char *src, int n)
 {
-	if (n < 0)
-	{
-		_putchar('-');
-		n *= -1;
-	}
+	int len1; /* string length for src */
+	int len2; /* string length for dest */
+	int i;
 
-	if (n / 10)
-		print_number(n / 10);
+	len1 = 0;
+	len2 = 0;
 
-	_putchar((n % 10) + '0');
+	while (src[len1] != '\0')
+		len1++;
+
+	while (dest[len2] != '\0')
+		len2++;
+
+	for (i = 0; i < n && src[i] != '\0'; i++)
+		dest[i] = src[i];
+
+	for (; i < n; i++)
+		dest[i] = '\0';
+
+	return (dest);
 }
