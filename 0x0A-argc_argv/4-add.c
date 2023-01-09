@@ -1,46 +1,28 @@
-#include "holberton.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-
 /**
-  * main - Prints the sum of args positive numbers
-  * @argc: argument count
-  * @argv: argument vector
-  *
-  * Return: Always zero
-  */
-int main(int argc, char *argv[])
+ * main - Entry point function
+ *
+ * @argc: Counts the number of parameters that go into main
+ * @argv: Pointer of array of pointers containing strings entering main
+ * Return: Always 0 (Success)
+ */
+int main(int argc, char **argv)
 {
-	int i;
-	unsigned int k, sum = 0;
-	char *e;
+	int i, n, ex;
 
+	ex = 0, n = 0;
 	if (argc > 1)
 	{
 		for (i = 1; i < argc; i++)
 		{
-			e = argv[i];
-
-			for (k = 0; k < strlen(e); k++)
-			{
-				if (e[k] < 48 || e[k] > 57)
-				{
-					printf("Error\n");
-					return (1);
-				}
-			}
-
-			sum += atoi(e);
-			e++;
+			if (_isnumber(argv[i]))
+				n += atoi(argv[i]);
+			else
+				ex = 1;
 		}
-
-		printf("%d\n", sum);
 	}
+	if (ex == 0)
+		printf("%i\n", n);
 	else
-	{
-		printf("0\n");
-	}
-
-	return (0);
+		printf("%s\n", "Error");
+	return (ex);
 }
