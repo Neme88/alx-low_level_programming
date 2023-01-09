@@ -1,30 +1,44 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include <ctype.h>
-
+#include "main.h"
 
 /**
- * _isnumber - checks if string is a number
- * @s: string
- *
- * Return: On success 1.
- * If not a number, 0 is returned.
+ * main - Program that takes in all integer arguments and returns the sum
+ * @argc: Number of command line arguments
+ * @argv: Array name
+ * Return: 1 if a non-integer is among the passed in arguments, 0 otherwise
  */
-int _isnumber(char *s)
-{
-	int i, check, d;
 
-	i = 0, d = 0, check = 1;
-	if (*s == '-')
-		i++;
-	for (; *(s + i) != 0; i++)
+int main(int argc, char *argv[])
+{
+	int i, j, length, sum;
+	char *ptr;
+
+	if (argc < 2)
+		printf("0\n");
+	else
 	{
-		d = isdigit(*(s + i));
-		if (d == 0)
+		sum = 0;
+		for (i = 1; i < argc; i++)
 		{
-			check = 0;
-			break;
+			ptr = argv[i];
+			length = strlen(ptr);
+
+			for (j = 0; j < length; j++)
+			{
+				if (isdigit(*(ptr + j)) == 0)
+				{
+					printf("Error\n");
+					return (1);
+				}
+			}
+
+			sum += atoi(argv[i]);
 		}
+
+	printf("%d\n", sum);
 	}
-	return (check);
+	return (0);
 }
