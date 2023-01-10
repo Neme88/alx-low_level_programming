@@ -9,24 +9,19 @@
  *
  * Return: Pointer
  */
-
 char *str_concat(char *s1, char *s2)
 {
-	int l1;
-	int l2;
-	int i;
-	int j;
+	int l1, l2, i, j;
 	char *s;
-	char *null = "";
+	char *nul = "";
 
 	if (s1 == NULL)
-		s1 = null;
+		s1 = nul;
 	if (s2 == NULL)
-		s2 = null;
+		s2 = nul;
 
-	l1 = 0;
-	l2 = 0;
-	while (*(s1 + l2))
+	l1 = 0, l2 = 0;
+	while (*(s1 + l1))
 		l1++;
 	while (*(s2 + l2))
 		l2++;
@@ -43,5 +38,4 @@ char *str_concat(char *s1, char *s2)
 		*(s + j) = *(s2 + i);
 
 	return (s);
-
 }
