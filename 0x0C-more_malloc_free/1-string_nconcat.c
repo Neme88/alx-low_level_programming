@@ -1,49 +1,52 @@
 #include "main.h"
-#include <stdio.h>
 #include <stdlib.h>
 
 /**
- * string_nconcat - concatenates two strings
- * @s1: string1
- * @s2: string2
- * @n: n bytes of the string 2
- *
- * Return: Pointer to allocated memory of s1 + nbytes of s2
- */
-
+  * string_nconcat - ...
+  * @s1: ...
+  * @s2: ...
+  * @n: ...
+  *
+  * Return: ...
+  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned in l1, l2, i, j;
-	char *s;
-	char *null = "";
+	unsigned int i = 0, j = 0, k = 0, l = 0;
+	char *str;
 
 	if (s1 == NULL)
-		s1 = null;
+		s1 = "";
 	if (s2 == NULL)
-		s2 = null;
+		s2 = "";
 
-	l1 = 0, l2 = 0;
-	while (*(s1 + l1))
-		l1++;
-	while (*(s2 + l2))
-		l2++;
+	while (s1[i])
+		i++;
 
-	if (n < l2)
-		l2 = n;
-	s = malloc(sizeof(char) * (l1 + l2 + 1));
+	while (s2[k])
+		k++;
 
-	if (s == 0)
-		return (0);
+	if (n >= k)
+		l = i + k;
+	else
+		l = i + n;
 
-	for (i = 0; i < l1; i++)
-		*(s + i) = *(s1 + i);
+	str = malloc(sizeof(char) * l + 1);
+	if (str == NULL)
+		return (NULL);
 
-	for (i = 0, j = l1; i < l2; j++, i++)
-		*(s + j) = *(s2 + i);
+	k = 0;
+	while (j < l)
+	{
+		if (j <= i)
+			str[j] = s1[j];
 
-	*(s + j) = '\0';
-
-	return (s);
-
+		if (j >= i)
+		{
+			str[j] = s2[k];
+			k++;
+		}
+		j++;
+	}
+	str[j] = '\0';
+	return (str);
 }
-
