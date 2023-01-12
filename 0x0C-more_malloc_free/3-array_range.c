@@ -3,13 +3,13 @@
 #include <stdlib.h>
 
 /**
- * array_range - creates an array of integers
+ * array_range -  creates an array of integers
  * The array created should contain all the values
  * from min (included) to max (included), ordered from min to max
  * @min: minimal value
  * @max: maximum value
  *
- * Return: Pointer to newly created array.
+ * Return: Pointer to allocated memory of s1 + nbytes of s2
  */
 int *array_range(int min, int max)
 {
@@ -24,7 +24,7 @@ int *array_range(int min, int max)
 	else if (max == min)
 		size = 2;
 
-	p = mallloc(sizeof(int) * size);
+	p = malloc(sizeof(int) * size);
 	if (p == 0)
 		return (0);
 
