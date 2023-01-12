@@ -6,7 +6,8 @@
   * malloc_checked - Allocates memory
   * @b: the size to allocate
   *
-  * Return: Nothing.
+  * Return: Pointer to allocated memory or normal process termination
+  * with a status value of 98
   */
 void *malloc_checked(unsigned int b)
 {
