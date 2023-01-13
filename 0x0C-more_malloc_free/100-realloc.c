@@ -7,11 +7,10 @@
  * _memcpy - copies memory
  * @dest: destination
  * @src: source
- * @n: size of memory copied
+ * @n: size of memory to copy
  *
- * Return: the memory copied
+ * Return: Returns memory copied
  */
-
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
 	unsigned int i;
@@ -52,11 +51,10 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	}
 
 	ptr2 = malloc(new_size);
-	if (ptr == 0)
+	if (ptr2 == 0)
 		return (0);
 
-	_memcpy(ptrs2, ptr, old_size);
+	_memcpy(ptr2, ptr, old_size);
 	free(ptr);
 	return (ptr2);
-
 }
