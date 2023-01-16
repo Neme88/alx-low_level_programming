@@ -1,13 +1,12 @@
 #include "dog.h"
 #include <stdio.h>
-#include <stdlib>
+#include <stdlib.h>
 
 /**
- * free_dog - Function that frees memory created in the 4-new_dog.c
+ * free_dog - Function that frees memory created in 4-new_dog.c
  * @d: Input struct
  * Return: Nothing
  */
-
 void free_dog(dog_t *d)
 {
 	if (d != NULL)
@@ -16,5 +15,4 @@ void free_dog(dog_t *d)
 		free(d->owner);
 		free(d);
 	}
-
 }
