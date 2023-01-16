@@ -15,7 +15,6 @@ int _strlen(char *str)
 		;
 
 	return (i);
-
 }
 
 /**
@@ -37,19 +36,17 @@ char *_strcpy(char *dest, char *src)
 }
 
 /**
- * new_dog - Program that creates a new dog. That means, Create a new struct
- * @name: Holds the name char array
- * @age: Holds the age float
- * @owner: Holds the owner char array
- *
+ * new_dog - Program that creates a new dog. That is, creates a new struct
+ * @name: Stores the name char array
+ * @age: Stores the age float
+ * @owner: Stores the owner char array
  * Return: Pointer to the newly created struct
  */
-
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *newDog = NULL;
 	char *newName, *newOwner;
-	int newLen, newOwnerLen;
+	int newNameLen, newOwnerLen;
 
 	if (name == NULL || owner == NULL)
 		return (NULL);
@@ -83,5 +80,4 @@ dog_t *new_dog(char *name, float age, char *owner)
 	newDog->owner = _strcpy(newOwner, owner);
 
 	return (newDog);
-
 }
