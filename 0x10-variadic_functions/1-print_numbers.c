@@ -5,12 +5,11 @@
 /**
  * print_numbers - Variadic function that prints whatever argument
  * is being passed in
- * @separator: The string to be printed between numbers
+ * @separator: What should separate functions
  * @n: Number of arguments being passed in
  * Return: Nothing
  */
-
-void print_numbers(const char *separator, const unsigned in n, ...)
+void print_numbers(const char *separator, const unsigned int n, ...)
 {
 	unsigned int i;
 	int num;
@@ -25,7 +24,6 @@ void print_numbers(const char *separator, const unsigned in n, ...)
 
 		if ((i != n - 1) && separator != NULL)
 			printf("%s", separator);
-
 	}
 	va_end(int_input);
 	printf("\n");
