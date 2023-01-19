@@ -1,10 +1,10 @@
 #include <stdio.h>
 
 /**
- * op_add - Function that returns the sum of two int values
+ * op_add - Function that returns the sum of two values
  * @a: First argument
  * @b: Second argument
- * Return: The sum of two arguments.
+ * Return: The sum of two arguments
  */
 int op_add(int a, int b)
 {
@@ -12,7 +12,7 @@ int op_add(int a, int b)
 }
 
 /**
- * op_sub - Function that returns the difference of two int values
+ * op_sub - Function that returns the difference of two values
  * @a: First argument
  * @b: Second argument
  * Return: The difference of two arguments
@@ -23,10 +23,10 @@ int op_sub(int a, int b)
 }
 
 /**
- * op_mul - Function that returns the product of two int values
+ * op_mul - Function that returns the product of two values
  * @a: First argument
  * @b: Second argument
- * Return: The product of two int values
+ * Return: The product of two values
  */
 int op_mul(int a, int b)
 {
@@ -34,7 +34,7 @@ int op_mul(int a, int b)
 }
 
 /**
- * op_div - Function that returns the quotient of two int values
+ * op_div - Function that returns the quotient of two values
  * @a: First argument
  * @b: Second argument
  * Return: The quotient of two values

@@ -3,7 +3,7 @@
 #include "3-calc.h"
 
 /**
- * main - Start here begins the logic
+ * main - Start here to do stuff
  * @argc: Number of arguments passed in
  * @argv: Arguments stored in each index
  * Return: Success
@@ -18,7 +18,6 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(98);
 	}
-
 
 	if ((*argv[2] == '/' || *argv[2] == '%') && *argv[3] == '0')
 	{
@@ -42,5 +41,4 @@ int main(int argc, char *argv[])
 	printf("%d\n", result);
 
 	return (0);
-
 }
