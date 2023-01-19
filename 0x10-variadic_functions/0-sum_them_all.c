@@ -7,7 +7,6 @@
  * @n: Number of arguments being passed into the function
  * Return: The sum of all arguments
  */
-
 int sum_them_all(const unsigned int n, ...)
 {
 	unsigned int i, sum = 0;
