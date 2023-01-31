@@ -2,8 +2,8 @@
 #include <stdio.h>
 
 /**
- * listint_len - returns the number of elements in a linked lists
- * @h: linked list of type listint_t to traverse
+ * listint_len - Prints all the elements in a listint_t list.
+ * @h: A pointer to the head of the list_t list
  *
  * Return: The number of nodes in a list.
  */
