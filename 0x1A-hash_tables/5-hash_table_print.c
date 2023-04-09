@@ -1,6 +1,5 @@
 /*
  * File: 5-hash_table_print.c
- * Auth: Brennan D Baraban
 */
 
 #include "hash_tables.h"
