@@ -1,5 +1,6 @@
 /*
  * File: 0-hash_table_create.c
+ * Auth: CC Nwaka.
  */
 
 #include "hash_tables.h"
