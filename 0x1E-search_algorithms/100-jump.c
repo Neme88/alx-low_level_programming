@@ -3,7 +3,7 @@
  */
 
 #include "search_algos.h"
-
+#include <math.h>
 /**
  * jump_list - Searches for an algorithm in a sorted singly
  *             linked list of integers using jump search.
